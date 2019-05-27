@@ -1,8 +1,8 @@
 <h2 align="center">
   Oh My ZSH - Config
 </h2>
+<hr>
 
-<hr align="center" width="75% >
            
 <h4 align="center">Content this Repository</h4>
 <p align="center">My config and my alias for <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank">OH MY ZSH</a>.</p>
@@ -22,8 +22,8 @@
       <code><br /></code>
         nins (npm install)
       </code>
+    </li>
+    <li>and other configurations</li>
   </ul>
   
 </p>
-
-<hr align="center" width="75% >
