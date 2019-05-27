@@ -9,16 +9,19 @@
 <p align="center">In my <b>.zshrc</b> file you have this settings/alias:
   <ul>
     <li>Auto Complete for: Laravel, Docker, VSCode, NPM, NODE, osX & GIT;
-    <li>My Alias:
+    <li>My Alias:<br />
       <code>
         sstart (php artisan serve)
+        </code><br />
+      <code>
         mig (php artisan migration --seed)
+        </code><br /><code>
         gpull (git pull)
+        </code><br /><code>
         ndev (npm run dev)
+      <code><br /></code>
         nins (npm install)
-       <code>
-         
-         and others.
+      </code>
   </ul>
   
 </p>
