@@ -1,7 +1,6 @@
 <h2 align="center">
   Oh My ZSH - Config
 </h2>
-<hr>
 
            
 <h4 align="center">Content this Repository</h4>
