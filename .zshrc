@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # --> Other Alias <-- #
 alias zshrc='sudo subl ~/.zshrc' 
 alias ..="cd .."
+alias hosts="sudo subl /etc/hosts"
 alias work="cd ~/Work"
 alias home="cd ~"
 
@@ -120,6 +121,7 @@ alias migfs="php artisan migrate:refresh --seed"
 alias slink="php artisan storage:link"
 alias lauth="php artisan make:auth"
 alias lproj="composer create-project --prefer-dist laravel/laravel"
+alias lkey="php artisan key:generate"
 
 # --> Composer Alias <-- #
 alias cpins="composer install"
@@ -136,8 +138,7 @@ alias nwatch="npm run watch"
 # --> Git Alias <-- #
 alias gpull="git pull"
 alias gpush="git push"
-alias gadd="git add"
-alias gclone="git clone"
+alias gadd="git add ."
 alias gst="git status"
 alias gstash="git stash"
 alias glog="git log"
@@ -149,6 +150,7 @@ alias bcunis="brew cask uninstall"
 alias bclean="brew cleanup"
 alias bupd="brew update"
 alias bupg="brew upgrade"
+alias bsearch="brew search"
 
 # --> Docker Alias <-- #
 alias dkps="docker ps"
