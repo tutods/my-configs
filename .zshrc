@@ -1,10 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tutods/.oh-my-zsh"
 
@@ -134,6 +130,8 @@ alias nins="npm install"
 alias nsins="npm install --save"
 alias nfix="npm audit fix"
 alias nwatch="npm run watch"
+alias nstart="npm start"
+alias ncins="npm clean-instal"
 
 # --> Git Alias <-- #
 alias gpull="git pull"
@@ -151,6 +149,7 @@ alias bclean="brew cleanup"
 alias bupd="brew update"
 alias bupg="brew upgrade"
 alias bsearch="brew search"
+alias bcrins="brew cask reinstall"
 
 # --> Docker Alias <-- #
 alias dkps="docker ps"
