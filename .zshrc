@@ -66,12 +66,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git  docker
-	osx  laravel brew
-	composer 
-	github node 
-	vscode npm)
+plugins=( git  docker osx  laravel composer github node vscode npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,16 +96,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## -- My Alias -- ##
 
-# --> Other Alias <-- #
+
+#
+# My Alias for ZSH and Oh-my-zsh
+#
+
+# General Alias #
 alias zshrc='sudo subl ~/.zshrc' 
 alias ..="cd .."
 alias hosts="sudo subl /etc/hosts"
-alias work="cd ~/Work"
+alias work="cd ~/Sites"
 alias home="cd ~"
 
-# --> Laravel Alias <-- #
+# Laravel Alias #
 alias sstart="php artisan serve"
 alias mig="php artisan migrate --seed"
 alias migfs="php artisan migrate:refresh --seed"
@@ -119,12 +118,12 @@ alias lauth="php artisan make:auth"
 alias lproj="composer create-project --prefer-dist laravel/laravel"
 alias lkey="php artisan key:generate"
 
-# --> Composer Alias <-- #
+# Composer Alias #
 alias cpins="composer install"
 alias cpupd="composer update"
 alias cupg="composer upgrade"
 
-# --> NPM Alias <-- #
+# NPM Alias #
 alias ndev="npm run dev"
 alias nins="npm install"
 alias nsins="npm install --save"
@@ -133,7 +132,7 @@ alias nwatch="npm run watch"
 alias nstart="npm start"
 alias ncins="npm clean-instal"
 
-# --> Git Alias <-- #
+# Git Alias #
 alias gpull="git pull"
 alias gpush="git push"
 alias gadd="git add ."
@@ -142,7 +141,7 @@ alias gstash="git stash"
 alias glog="git log"
 alias gcall="git commit --all -m"
 
-# --> Brew <-- #
+# Brew Alias #
 alias bcins="brew cask install"
 alias bcunis="brew cask uninstall"
 alias bclean="brew cleanup"
@@ -151,7 +150,7 @@ alias bupg="brew upgrade"
 alias bsearch="brew search"
 alias bcrins="brew cask reinstall"
 
-# --> Docker Alias <-- #
+# Dcoker Alias #
 alias dkps="docker ps"
 alias dkst="docker stats"
 alias dkpsa="docker ps -a"
