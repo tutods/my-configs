@@ -102,21 +102,31 @@ source $ZSH/oh-my-zsh.sh
 # My Alias for ZSH and Oh-my-zsh
 #
 
+
 # General Alias #
 alias zshrc='sudo subl ~/.zshrc' 
 alias ..="cd .."
 alias hosts="sudo subl /etc/hosts"
 alias work="cd ~/Sites"
+alias peta="cd ~/Sites/Petapilot\ Projects"
 alias home="cd ~"
 
 # Laravel Alias #
-alias sstart="php artisan serve"
+alias lstart="php artisan serve"
 alias mig="php artisan migrate --seed"
 alias migfs="php artisan migrate:refresh --seed"
 alias slink="php artisan storage:link"
 alias lauth="php artisan make:auth"
 alias lproj="composer create-project --prefer-dist laravel/laravel"
 alias lkey="php artisan key:generate"
+alias mmodel='php artisan make:model'
+alias mcontr='php artisan make:controller'
+alias mseeder='php artisan make:seeder'
+alias mtest='php artisan make:test'
+alias ccache='php artisan cache:clear'
+alias cconfig='php artisan config:clear'
+alias cview='php artisan view:clear'
+alias croute='php artisan route:clear'
 
 # Composer Alias #
 alias cpins="composer install"
@@ -130,7 +140,7 @@ alias nsins="npm install --save"
 alias nfix="npm audit fix"
 alias nwatch="npm run watch"
 alias nstart="npm start"
-alias ncins="npm clean-instal"
+alias ncins="npm clean-install"
 
 # Git Alias #
 alias gpull="git pull"
