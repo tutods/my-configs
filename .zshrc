@@ -66,7 +66,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git  docker osx  laravel composer github node vscode npm)
+plugins=(git docker osx laravel composer github node vscode npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,13 +102,13 @@ source $ZSH/oh-my-zsh.sh
 # My Alias for ZSH and Oh-my-zsh
 #
 
-
 # General Alias #
 alias zshrc='sudo subl ~/.zshrc' 
 alias ..="cd .."
 alias hosts="sudo subl /etc/hosts"
 alias work="cd ~/Sites"
 alias peta="cd ~/Sites/Petapilot\ Projects"
+alias friends="cd ~/Sites/Conding\ Friends"
 alias home="cd ~"
 
 # Laravel Alias #
@@ -127,11 +127,13 @@ alias ccache='php artisan cache:clear'
 alias cconfig='php artisan config:clear'
 alias cview='php artisan view:clear'
 alias croute='php artisan route:clear'
+alias pa="php artisan"
 
 # Composer Alias #
 alias cpins="composer install"
 alias cpupd="composer update"
 alias cupg="composer upgrade"
+alias cp="composer"
 
 # NPM Alias #
 alias ndev="npm run dev"
@@ -150,6 +152,7 @@ alias gst="git status"
 alias gstash="git stash"
 alias glog="git log"
 alias gcall="git commit --all -m"
+alias gcom="git commit -m"
 
 # Brew Alias #
 alias bcins="brew cask install"
