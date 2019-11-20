@@ -1,7 +1,9 @@
 # Configs
 
 <h2 align="center">Hyper</h2>
-----
+
+
+
 <h2 align="center">
   Oh My ZSH 
 </h2>
