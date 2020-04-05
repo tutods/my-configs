@@ -106,8 +106,6 @@ alias zshrc='sudo subl ~/.zshrc'
 alias ..="cd .."
 alias hosts="sudo subl /etc/hosts"
 alias work="cd ~/Sites"
-alias peta="cd ~/Sites/Petapilot\ Projects"
-alias friends="cd ~/Sites/Conding\ Friends"
 alias home="cd ~"
 
 # Laravel Alias #
