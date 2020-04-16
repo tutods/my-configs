@@ -7,7 +7,8 @@ export ZSH="/Users/tutods/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -111,8 +112,7 @@ alias home="cd ~"
 # Laravel Alias #
 alias lstart="php artisan serve"
 alias mig="php artisan migrate --seed"
-alias migrfs="php artisan migrate:refresh --seed"
-alias migfs="php artisan migrate:fresh --seed"
+alias migfs="php artisan migrate:refresh --seed"
 alias slink="php artisan storage:link"
 alias lauth="php artisan make:auth"
 alias lproj="composer create-project --prefer-dist laravel/laravel"
@@ -160,7 +160,20 @@ alias bupd="brew update"
 alias bupg="brew upgrade"
 alias bsearch="brew search"
 alias bcrins="brew cask reinstall"
-alias bins="brew install"
+
+# Dcoker Alias #
+alias dkps="docker ps"
+alias dkst="docker stats"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
+
+# Docker container alias #
+alias dmongo="docker exec -it mongo mongo"
+alias dmysql="docker exec -it mariadb mysql"
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
