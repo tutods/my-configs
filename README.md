@@ -3,7 +3,7 @@ In this repository you can find my configs for:
 - Hyper Terminal
 - Oh-my-zsh
 
-[Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
+![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
 
 # Oh-my-zsh
 
