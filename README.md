@@ -1,7 +1,7 @@
 # My Configs
 In this repository you can find my configs for:
-- Hyper Terminal
-- Oh-my-zsh
+- [Hyper Terminal](https://hyper.is/)
+- [Oh-my-zsh](https://ohmyz.sh/)
 
 ![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
 
