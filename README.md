@@ -32,6 +32,14 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "
 ```
+
+## Powerlevel10K
+1. Install: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
+1. Set theme on `.zshrc` file: `ZSH_THEME="powerlevel10k/powerlevel10k"`
+1. Set your preferences on wizard when open terminal
+
+> **See** `.zshrc.powerlevel`file
+
 ## Zinit
 1. Install: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"`
 1. Add code in `.zshrc` after `### End of ZInit's installer chunk`:
