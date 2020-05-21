@@ -7,6 +7,10 @@ In this repository you can find my configs for:
 
 # Oh-my-zsh
 
+![Spaceship and Powerlevel10k](https://i.ibb.co/qRJBcfg/Screenshot-at-May-21-08-57-11.png)
+
+> Spaceship **vs** Powerlevel10K
+
 ## Spaceship
 1. Clone: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
 1. Link: `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
