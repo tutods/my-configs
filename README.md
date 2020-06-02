@@ -42,7 +42,7 @@ SPACESHIP_CHAR_SUFFIX=" "
 1. Set theme on `.zshrc` file: `ZSH_THEME="powerlevel10k/powerlevel10k"`
 1. Set your preferences on wizard when open terminal
 
-> **See** `.zshrc.powerlevel`file
+> **See** `.zshrc.powerlevel` file
 
 ## Zinit
 1. Install: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"`
