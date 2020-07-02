@@ -53,3 +53,20 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 ```
 > Already added on my `.zshrc` config
+
+# Hyper
+
+## Theme Used
+
+- **Name:** Omni (by Rockseat)
+- **Link:** https://github.com/getomni/hyper-omni
+
+To install please see tutorial on **Omni** repository.
+
+### How to use?
+
+Add on `localPlugins: []` entry `'hyper-omni`:
+
+```javascript
+localPlugins: ['hyper-omni'],
+```
