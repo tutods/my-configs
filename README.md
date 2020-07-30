@@ -4,6 +4,7 @@ In this repository you can find my configs for:
 - [Oh-my-zsh](https://ohmyz.sh/)
 
 This configs help me to improve my workflow on terminal, using some alias (on ***oh-my-zsh**)and run some commands again (**ZSH AutoSuggestions**).
+
 If this repo is useful for you give a star!
 
 
@@ -20,12 +21,9 @@ If this repo is useful for you give a star!
 📁 **File:** `.zshrc`
 
 #### 📖 **How To Use:**
-1. Clone:
-  - `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
-1. Link:
-  - `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
-1. Set theme:
-  - `ZSH_THEME="spaceship"`
+* Clone: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
+* Link: `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
+* Set theme: `ZSH_THEME="spaceship"`
 
 #### Custom Options
 You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
@@ -36,12 +34,9 @@ You can customize some things on this theme, for that see this [link](https://gi
 📁 **File:** `.zshrc.powerlevel`
 
 #### 📖 **How To Use:**
-1. Install
-   - `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
-1. Set theme on `.zshrc` file: 
-   - `ZSH_THEME="powerlevel10k/powerlevel10k"`
-1. Set your preferences on wizard when open terminal
-
+* Install: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
+* Set theme on `.zshrc` file: `ZSH_THEME="powerlevel10k/powerlevel10k"`
+* Set your preferences on wizard when open terminal
 
 ## Zinit
 
@@ -63,19 +58,31 @@ zinit light zsh-users/zsh-completions
 > Already added on my `.zshrc` config
 
 # Hyper
+📁 **File:** `.hyper.js`
 
 ![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
 
-## 🎨 Theme Used
+## ➕ Plugins
+- [**hyper-tabs-enhanced**](https://github.com/henrikdahl/hyper-tabs-enhanced)
+- [**hypercwd**](https://github.com/hharnisc/hypercwd)
+- [**hyper-search**](https://github.com/jaanauati/hyper-search)
+- [**hyper-statusline**](https://github.com/henrikdahl/hyper-statusline)
 
-- **Name:** Omni (by Rockseat)
-- **Link:** https://github.com/getomni/hyper-omni
+## 🎨 Theme
 
-To install please see tutorial on **Omni** repository.
+- **Name:** Omni (by **[Rockseat](https://rocketseat.com.br)**)
+- **Link:** [GitHub Repo](https://github.com/getomni/hyper-omni)
+
+### 📖 How to install?
+
+To install please see tutorial on **[Omni](https://github.com/getomni/hyper-omni)** repository, is very easy!
+
+* Clone and move folder: `git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni`
+
 
 ### 📖 How to use?
 
-Add on `localPlugins: []` entry `'hyper-omni`:
+After install you onli need add on `localPlugins: []` a new entry with `'hyper-omni`:
 
 ```javascript
 localPlugins: ['hyper-omni'],
