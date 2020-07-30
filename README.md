@@ -3,7 +3,8 @@ In this repository you can find my configs for:
 - [Hyper Terminal](https://hyper.is/)
 - [Oh-my-zsh](https://ohmyz.sh/)
 
-This configs help me to improve my workflow on terminal, using some 
+This configs help me to improve my workflow on terminal, using some alias (on ***oh-my-zsh**)and run some commands again (**ZSH AutoSuggestions**).
+If this repo is useful for you give a star!
 
 
 # Oh-my-zsh
@@ -12,11 +13,13 @@ This configs help me to improve my workflow on terminal, using some
 
 > Spaceship **vs** Powerlevel10K
 
-## Spaceship
+## 🎨 Themes
+
+### Spaceship
 🔗 **Repo:** [URL](https://github.com/denysdovhan/spaceship-prompt)
 📁 **File:** `.zshrc`
 
-### 📖 **How To Use:**
+#### 📖 **How To Use:**
 1. Clone:
   - `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
 1. Link:
@@ -24,15 +27,15 @@ This configs help me to improve my workflow on terminal, using some
 1. Set theme:
   - `ZSH_THEME="spaceship"`
 
-### Custom Options
+#### Custom Options
 You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
 
 
-## Powerlevel10K
+### Powerlevel10K
 🔗 **Repo:** [URL](https://github.com/romkatv/powerlevel10k/)
 📁 **File:** `.zshrc.powerlevel`
 
-### 📖 **How To Use:**
+#### 📖 **How To Use:**
 1. Install
    - `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
 1. Set theme on `.zshrc` file: 
