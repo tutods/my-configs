@@ -12,6 +12,8 @@ In this repository you can find my configs for:
 > Spaceship **vs** Powerlevel10K
 
 ## Spaceship
+🔗 **Repo:** [URL](https://github.com/denysdovhan/spaceship-prompt)
+
 1. Clone: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
 1. Link: `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
 1. Set theme: `ZSH_THEME="spaceship"`
@@ -38,6 +40,8 @@ SPACESHIP_CHAR_SUFFIX=" "
 ```
 
 ## Powerlevel10K
+🔗 **Repo:** [URL](https://github.com/romkatv/powerlevel10k/)
+
 1. Install: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
 1. Set theme on `.zshrc` file: `ZSH_THEME="powerlevel10k/powerlevel10k"`
 1. Set your preferences on wizard when open terminal
