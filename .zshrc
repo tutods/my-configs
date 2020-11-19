@@ -68,7 +68,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker osx laravel composer github node vscode npm yarn)
+plugins=(git docker osx laravel composer github node vscode npm yarn python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # My Alias for ZSH and Oh-my-zsh
 #
-
+alias python=python3
 # General Alias #
 alias zshrc='sudo code ~/.zshrc'
 alias ..="cd .."
@@ -207,3 +207,7 @@ zinit light-mode for \
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+
+### Load NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
