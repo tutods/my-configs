@@ -42,7 +42,7 @@ ZSH_THEME="spaceship"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -68,7 +68,22 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker osx laravel composer github node vscode npm yarn python)
+export NVM_LAZY_LOAD=true
+
+plugins=(
+	git
+	z
+	docker
+	osx
+	laravel
+	composer
+	node
+	ng
+	vscode
+	npm
+	yarn
+	zsh-nvm
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,16 +113,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
-#
-# My Alias for ZSH and Oh-my-zsh
-#
+# Run Python 3 using python command #
 alias python=python3
+
 # General Alias #
-alias zshrc='sudo code ~/.zshrc'
-alias ..="cd .."
-alias hosts="sudo code /etc/hosts"
+alias zshrc='code ~/.zshrc'
+# alias ..="cd .."
+alias hosts="code /etc/hosts"
 alias work="cd ~/Sites"
 alias home="cd ~"
 
@@ -144,24 +156,14 @@ alias nwatch="npm run watch"
 alias nstart="npm start"
 alias ncins="npm clean-install"
 
-# Git Alias #
-alias gpull="git pull"
-alias gpush="git push"
-alias gadd="git add ."
-alias gst="git status"
-alias gstash="git stash"
-alias glog="git log"
-alias gcall="git commit --all -m"
-alias gcom="git commit -m"
-
 # Brew Alias #
-alias bcins="brew cask install"
-alias bcunis="brew cask uninstall"
+alias bcins="brew install --cask"
+alias bcunis="brew uninstall --cask"
 alias bclean="brew cleanup"
 alias bupd="brew update"
 alias bupg="brew upgrade"
 alias bsearch="brew search"
-alias bcrins="brew cask reinstall"
+alias bcrins="brew reinstall --casm"
 
 # Dcoker Alias #
 alias dkps="docker ps"
@@ -177,11 +179,51 @@ alias dkcpstop="docker-compose stop"
 alias dmongo="docker exec -it mongo mongo"
 alias dmysql="docker exec -it mariadb mysql"
 
+# Custom Functions #
+function commt() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+### Configs to SpaceShip ###
+LS_COLORS=$LS_COLORS:'ow=01;34:' ; export LS_COLORS
+
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+SPACESHIP_USER_SHOW="always" # Shows System user name before directory name
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+# SPACESHIP_PROMPT_SEPARATE_LINE=false # Make the prompt span across two lines
+# SPACESHIP_DIR_TRUNC=1 # Shows only the last directory folder name
+
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+### End Configs to SpaceShip ###
+
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+### Load YARN ###
+export PATH="$PATH:$(yarn global bin)"
+### End Load YARN ###
+
+### Start Zinit ###
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -207,10 +249,8 @@ zinit light-mode for \
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+### End Zinit ###
 
-### Load NVM
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-### Load YARN to Angular Cli works
-export PATH="$PATH:$(yarn global bin)"
+### Remove % Symbol ###
+unsetopt PROMPT_SP
+### End Remove % Symbol ###

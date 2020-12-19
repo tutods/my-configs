@@ -140,6 +140,35 @@ module.exports = {
 		webGLRenderer: true,
 
 		// for advanced config flags please refer to https://hyper.is/#cfg
+		// For macOS (show close, minimize and maximize)
+		showWindowControls: 'left',
+
+		// For other systems (show close, minimize and maximize)
+		hyperCustomControls: {
+			side: 'right', // Default: 'left'
+			circleSize: 11, // Default: 11
+			circleGap: 7.5, // Default: 7.5
+			distanceToSide: 15, // Default: 15
+			opacity: 1, // Default: 1
+			hoverOpacity: 0.5, // Default: 0.5
+
+			// Default controls below:
+			// NOTE: You can remove a control, if you want to.
+			controls: [
+				{
+					type: 'close',
+					color: '#F24F55',
+				},
+				{
+					type: 'minimize',
+					color: '#FBC536',
+				},
+				{
+					type: 'maximize',
+					color: '#39EA48',
+				},
+			],
+		},
 	},
 
 	// a list of plugins to fetch and install from npm
@@ -150,12 +179,14 @@ module.exports = {
 	//   `project#1.0.1`
 	//hyperline
 	plugins: [
-        'hyper-tabs-enhanced',
-        'hypercwd',
-        'hyper-search',
-        'hyper-statusline',
-        "hyper-dracula"
-    ],
+		'hyper-mac-controls',
+		'hyper-custom-controls',
+		'hyper-tabs-enhanced',
+		'hypercwd',
+		'hyper-search',
+		'hyper-statusline',
+		'hyper-dracula',
+	],
 
 	// in development, you can create a directory under
 	// `~/.hyper_plugins/local/` and include it here

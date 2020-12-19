@@ -10,11 +10,7 @@ If this repo is useful for you give a star!
 
 # Oh-my-zsh
 
-![Spaceship and Powerlevel10k](https://i.ibb.co/qRJBcfg/Screenshot-at-May-21-08-57-11.png)
-
-> Spaceship **vs** Powerlevel10K
-
-## 🎨 Themes
+## 🎨 Theme
 
 ### Spaceship
 🔗 **Repo:** [URL](https://github.com/denysdovhan/spaceship-prompt)
@@ -28,22 +24,12 @@ If this repo is useful for you give a star!
 #### Custom Options
 You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
 
-
-### Powerlevel10K
-🔗 **Repo:** [URL](https://github.com/romkatv/powerlevel10k/)
-📁 **File:** `.zshrc.powerlevel`
-
-#### 📖 **How To Use:**
-* Install: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k`
-* Set theme on `.zshrc` file: `ZSH_THEME="powerlevel10k/powerlevel10k"`
-* Set your preferences on wizard when open terminal
-
 ## Zinit
 
 **Zinit** is a **Zsh** plugin manager, you can use to install plugins, themes, etc. In my case I use to install some **zsh plugins** like:
-- (Fast Syntax Highlighting by *zdharma*)[https://github.com/zdharma/fast-syntax-highlighting]
-- (ZSH Autosuggestions by *zsh-users*)[https://github.com/zsh-users/zsh-autosuggestions]
-- (ZSH Completions by *zsh-users*)[https://github.com/zsh-users/zsh-completions]
+- **[Fast Syntax Highlighting by *zdharma*](https://github.com/zdharma/fast-syntax-highlighting)**
+- **[ZSH Autosuggestions by *zsh-users*](https://github.com/zsh-users/zsh-autosuggestions)**
+- **[ZSH Completions by *zsh-users*](https://github.com/zsh-users/zsh-completions)**
 
 ### 📖 **How To Use:**
 
@@ -62,28 +48,41 @@ zinit light zsh-users/zsh-completions
 
 ![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
 
+## How to Remove `%` symbol when start
+- Add on `.zhsrc` file this line:
+```bash
+### Remove % Symbol on Hyper
+unsetopt PROMPT_SP
+```
+
+> Already added on my `.zshrc` config
+
 ## ➕ Plugins
-- [**hyper-tabs-enhanced**](https://github.com/henrikdahl/hyper-tabs-enhanced)
-- [**hypercwd**](https://github.com/hharnisc/hypercwd)
-- [**hyper-search**](https://github.com/jaanauati/hyper-search)
-- [**hyper-statusline**](https://github.com/henrikdahl/hyper-statusline)
+- `hyper-mac-controls`
+- `hyper-custom-controls`
+- `hyper-tabs-enhanced`
+- `hypercwd`
+- `hyper-search`
+- `hyper-statusline`
 
 ## 🎨 Theme
 
-- **Name:** Omni (by **[Rockseat](https://rocketseat.com.br)**)
-- **Link:** [GitHub Repo](https://github.com/getomni/hyper-omni)
+💬 **Nome:** Dracula <small>(I have used this theme ok)</small>
+🔗 **Repo:** [URL](https://github.com/dracula/hyper)
 
 ### 📖 How to install?
 
-To install please see tutorial on **[Omni](https://github.com/getomni/hyper-omni)** repository, is very easy!
+Run on your terminal this command:
+```bash
+hyper install hyper-dracula
+```
 
-* Clone and move folder: `git clone https://github.com/getomni/hyper-omni ~/.hyper_plugins/local/hyper-omni`
-
+But, if you copy my config not need install, only copy and paste on your `.hyper.js` file
 
 ### 📖 How to use?
 
-After install you onli need add on `localPlugins: []` a new entry with `'hyper-omni`:
+After install you only need add on `plugins: []` a new entry:
 
 ```javascript
-localPlugins: ['hyper-omni'],
+plugins: ['hyper-dracula'],
 ```
