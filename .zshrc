@@ -74,15 +74,14 @@ plugins=(
 	git
 	z
 	docker
-	osx
 	laravel
-	composer
 	node
 	ng
 	vscode
-	npm
-	yarn
 	zsh-nvm
+	zsh-completions
+	zsh-autosuggestions
+	fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,9 +116,6 @@ source $ZSH/oh-my-zsh.sh
 alias python=python3
 
 # General Alias #
-alias zshrc='code ~/.zshrc'
-# alias ..="cd .."
-alias hosts="code /etc/hosts"
 alias work="cd ~/Sites"
 alias home="cd ~"
 
@@ -223,33 +219,10 @@ prompt_context() {
 export PATH="$PATH:$(yarn global bin)"
 ### End Load YARN ###
 
-### Start Zinit ###
-### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
-
-### End of Zinit's installer chunk
-
-zinit light zdharma/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-### End Zinit ###
+### JDK ###
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin
+### End JDK ###
 
 ### Remove % Symbol ###
 unsetopt PROMPT_SP

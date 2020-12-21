@@ -24,24 +24,12 @@ If this repo is useful for you give a star!
 #### Custom Options
 You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
 
-## Zinit
+## Custom Plugins
 
-**Zinit** is a **Zsh** plugin manager, you can use to install plugins, themes, etc. In my case I use to install some **zsh plugins** like:
+In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the steps on plugins repository:
 - **[Fast Syntax Highlighting by *zdharma*](https://github.com/zdharma/fast-syntax-highlighting)**
 - **[ZSH Autosuggestions by *zsh-users*](https://github.com/zsh-users/zsh-autosuggestions)**
 - **[ZSH Completions by *zsh-users*](https://github.com/zsh-users/zsh-completions)**
-
-### 📖 **How To Use:**
-
-1. Install: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"`
-1. Add code in `.zshrc` after `### End of ZInit's installer chunk`:
-
-```
-zinit light zdharma/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-```
-> Already added on my `.zshrc` config
 
 # Hyper
 📁 **File:** `.hyper.js`
