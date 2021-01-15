@@ -182,6 +182,17 @@ function commt() {
   git push
 }
 
+function stashPull() {
+    git stash
+    git pull
+    git stash pop
+}
+
+function goMaster() {
+    git checkout master
+    git pull
+}
+
 ### Configs to SpaceShip ###
 LS_COLORS=$LS_COLORS:'ow=01;34:' ; export LS_COLORS
 
@@ -218,11 +229,6 @@ prompt_context() {
 ### Load YARN ###
 export PATH="$PATH:$(yarn global bin)"
 ### End Load YARN ###
-
-### JDK ###
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export PATH=$PATH:$JAVA_HOME/bin
-### End JDK ###
 
 ### Remove % Symbol ###
 unsetopt PROMPT_SP
