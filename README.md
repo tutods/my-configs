@@ -30,6 +30,7 @@ In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the step
 - **[Fast Syntax Highlighting by *zdharma*](https://github.com/zdharma/fast-syntax-highlighting)**
 - **[ZSH Autosuggestions by *zsh-users*](https://github.com/zsh-users/zsh-autosuggestions)**
 - **[ZSH Completions by *zsh-users*](https://github.com/zsh-users/zsh-completions)**
+- **[ZSH NVM by *lukechilds*](https://github.com/lukechilds/zsh-nvm)**
 
 # Hyper
 📁 **File:** `.hyper.js`
