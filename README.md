@@ -37,6 +37,12 @@ In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the step
 
 ![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
 
+## Window Buttons like macOS
+
+In **Linux** you can use [this plugin](https://github.com/krve/hyper-mac-controls) to put window controls like macOS.
+
+Only need add in `plugins` array the value `'hyper-mac-controls'`
+
 ## How to Remove `%` symbol when start
 - Add on `.zhsrc` file this line:
 ```bash
