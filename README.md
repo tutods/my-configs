@@ -62,7 +62,8 @@ unsetopt PROMPT_SP
 
 ## 🎨 Theme
 
-💬 **Nome:** Dracula <small>(I have used this theme ok)</small>
+💬 **Name:** Dracula <small>(I have used this theme ok)</small>
+
 🔗 **Repo:** [URL](https://github.com/dracula/hyper)
 
 ### 📖 How to install?
