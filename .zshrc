@@ -30,7 +30,7 @@ ZSH_THEME="spaceship"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=5
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -113,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Run Python 3 using python command #
-alias python=python3
+# alias python=python3
 
 # General Alias #
 alias work="cd ~/Sites"
@@ -174,6 +174,7 @@ alias dkcpstop="docker-compose stop"
 # Docker container alias #
 alias dmongo="docker exec -it mongo mongo"
 alias dmysql="docker exec -it mariadb mysql"
+alias dpostgres="docker exec -it postgres psql"
 
 # Custom Functions #
 function commt() {
@@ -233,3 +234,9 @@ export PATH="$PATH:$(yarn global bin)"
 ### Remove % Symbol ###
 unsetopt PROMPT_SP
 ### End Remove % Symbol ###
+
+### Load PyEnv ###
+# Load pyenv automatically by appending
+# the following to ~/.zshrc:
+eval "$(pyenv init -)"
+### End Load PyEnv ###
