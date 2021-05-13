@@ -114,6 +114,9 @@ source $ZSH/oh-my-zsh.sh
 alias work="cd ~/Sites"
 alias home="cd ~"
 
+# GIT Alias #
+alias gst="git status"
+
 # # Laravel Alias #
 # alias lstart="php artisan serve"
 # alias mig="php artisan migrate --seed"
@@ -193,10 +196,10 @@ function goMaster() {
     git pull
 }
 
-timezsh() {
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
-}
+# timezsh() {
+#   shell=${1-$SHELL}
+#   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+# }
 
 # Load all of the plugins that were defined in ~/.zshrc
 # for plugin ($plugins); do
