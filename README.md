@@ -16,6 +16,7 @@ If this repo is useful for you give a star!
 ### Spaceship
 
 🔗 **Repo:** [URL](https://github.com/denysdovhan/spaceship-prompt)
+
 📁 **File:** `.zshrc`
 
 #### 📖 **How To Use:**
@@ -31,6 +32,8 @@ You can customize some things on this theme, for that see this [link](https://gi
 ### Powerlevel 10K
 
 In `.zshrc-powerlevel10k` file you can see **Oh-My-ZSH** config using **PowerLevel 10K** theme.
+
+To run wizard run command: `p10k configure`
 
 🔗 **Repo:** https://github.com/romkatv/powerlevel10k
 
