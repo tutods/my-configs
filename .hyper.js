@@ -12,9 +12,8 @@ module.exports = {
 		fontSize: 14,
 
 		// font family with optional fallbacks
-		//fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 		fontFamily:
-			'"Fira Code", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+			'"Jetbrains Mono",Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
 		// default font weight: 'normal' or 'bold'
 		fontWeight: 'normal',
@@ -29,7 +28,7 @@ module.exports = {
 		letterSpacing: 0,
 
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-		cursorColor: 'rgba(248,28,229,0.8)',
+		// cursorColor: 'rgba(248,28,229,0.8)',
 
 		// terminal text color under BLOCK cursor
 		cursorAccentColor: '#000',
@@ -48,7 +47,7 @@ module.exports = {
 		backgroundColor: '#000',
 
 		// terminal selection color
-		selectionColor: 'rgba(248,28,229,0.3)',
+		// selectionColor: 'rgba(248,28,229,0.3)',
 
 		// border color (window, tabs)
 		borderColor: '#333',
@@ -130,7 +129,7 @@ module.exports = {
 		// choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
 		// or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
 		// (inside tmux or vim with mouse mode enabled for example).
-		macOptionSelectionMode: 'horizontal',
+		macOptionSelectionMode: 'vertical',
 
 		// URL to custom bell
 		// bellSoundURL: 'http://example.com/bell.mp3',
@@ -140,34 +139,22 @@ module.exports = {
 		webGLRenderer: true,
 
 		// for advanced config flags please refer to https://hyper.is/#cfg
-		// For macOS (show close, minimize and maximize)
-		showWindowControls: 'left',
+		MaterialTheme: {
+			// Set the theme variant,
+			// OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
+			theme: 'Palenight',
 
-		// For other systems (show close, minimize and maximize)
-		hyperCustomControls: {
-			side: 'right', // Default: 'left'
-			circleSize: 11, // Default: 11
-			circleGap: 7.5, // Default: 7.5
-			distanceToSide: 15, // Default: 15
-			opacity: 1, // Default: 1
-			hoverOpacity: 0.5, // Default: 0.5
+			// [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
+			// OPTIONS: From 0.1 to 1
+			backgroundOpacity: '1',
 
-			// Default controls below:
-			// NOTE: You can remove a control, if you want to.
-			controls: [
-				{
-					type: 'close',
-					color: '#F24F55',
-				},
-				{
-					type: 'minimize',
-					color: '#FBC536',
-				},
-				{
-					type: 'maximize',
-					color: '#39EA48',
-				},
-			],
+			// [Optional] Set the accent color for the current active tab
+			accentColor: '#64FFDA',
+
+			// [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
+			// OPTIONS: 'dark', 'ultra-dark', 'bright'
+			// NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
+			vibrancy: 'ultra-dark',
 		},
 	},
 
@@ -177,15 +164,12 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	//hyperline
 	plugins: [
-		'hyper-mac-controls',
-		'hyper-custom-controls',
 		'hyper-tabs-enhanced',
 		'hypercwd',
 		'hyper-search',
 		'hyper-statusline',
-		'hyper-dracula',
+		'hyper-material-theme',
 	],
 
 	// in development, you can create a directory under
