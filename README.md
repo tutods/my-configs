@@ -45,6 +45,7 @@ In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the step
 -   **[ZSH Autosuggestions by _zsh-users_](https://github.com/zsh-users/zsh-autosuggestions)**
 -   **[ZSH Completions by _zsh-users_](https://github.com/zsh-users/zsh-completions)**
 -   **[ZSH NVM by _lukechilds_](https://github.com/lukechilds/zsh-nvm)**
+-   **[OMZ Homebrew](https://github.com/digitalraven/omz-homebrew)**
 
 # Hyper
 
