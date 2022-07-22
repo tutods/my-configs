@@ -29,14 +29,6 @@ If this repo is useful for you give a star!
 
 You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
 
-### Powerlevel 10K
-
-In `.zshrc-powerlevel10k` file you can see **Oh-My-ZSH** config using **PowerLevel 10K** theme.
-
-To run wizard run command: `p10k configure`
-
-🔗 **Repo:** https://github.com/romkatv/powerlevel10k
-
 ## Custom Plugins
 
 In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the steps on plugins repository:
@@ -44,7 +36,6 @@ In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the step
 -   **[Fast Syntax Highlighting by _zdharma_](https://github.com/zdharma/fast-syntax-highlighting)**
 -   **[ZSH Autosuggestions by _zsh-users_](https://github.com/zsh-users/zsh-autosuggestions)**
 -   **[ZSH Completions by _zsh-users_](https://github.com/zsh-users/zsh-completions)**
--   **[ZSH NVM by _lukechilds_](https://github.com/lukechilds/zsh-nvm)**
 -   **[OMZ Homebrew](https://github.com/digitalraven/omz-homebrew)**
 
 # Hyper
