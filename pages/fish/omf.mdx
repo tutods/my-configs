@@ -17,8 +17,14 @@ import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
   </div>
 </Bleed>
 
-<ExternalLinkButton href="https://github.com/oh-my-fish/oh-my-fish" target="_blank" className={'mt-4 inline-flex items-center gap-2'}>
-  <><BsGithub className={'w-5 h-5'} /> GitHub Repository</>
+<ExternalLinkButton
+  href="https://github.com/oh-my-fish/oh-my-fish"
+  target="_blank"
+  className={"mt-4 inline-flex items-center gap-2"}
+>
+  <>
+    <BsGithub className={"h-5 w-5"} /> GitHub Repository
+  </>
 </ExternalLinkButton>
 
 ## Install
@@ -52,10 +58,12 @@ This is my personal configuration for **Oh-my-fish**, here you can find the alia
 > **File:** `.config/fish/conf.d/omf.fish`
 
 <Callout type="warning" emoji="⚠️️️">
-If you pretend to use any of my alias/functions, you need to add that specific code after the 4 fist lines and before of the last line (`source ...`)
+  If you pretend to use any of my alias/functions, you need to add that specific
+  code after the 4 fist lines and before of the last line (`source ...`)
 </Callout>
 
 ### Git Alias & Functions
+
 ```bash
 alias g="git"
 alias gst="git status -sb"
@@ -91,6 +99,7 @@ end
 ```
 
 ### Homebrew Alias
+
 ```bash
 alias bci="brew install --cask"
 alias bi="brew install"
@@ -102,6 +111,7 @@ alias bsearch="brew search"
 ```
 
 ### Linux <small>(Debian distros)</small> Alias
+
 ```bash
 alias aptI="sudo apt install"
 alias aptR="sudo apt remove"
@@ -111,6 +121,7 @@ alias aptUpg="sudo apt upgrade -y"
 ```
 
 ### Docker Alias
+
 ```bash
 alias dps="docker ps --format '{{.Names}}'"
 alias dpst="docker ps --format 'table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Names}}'"
@@ -119,6 +130,7 @@ alias dvunused="docker volume ls -q -f 'dangling=true'"
 ```
 
 ### Others
+
 ```bash
 # Navigation Alias
 alias work="cd ~/Developer"
@@ -131,5 +143,6 @@ alias ls="exa --icons"
 ```
 
 <Callout type="warning" emoji="⚠️️️">
-  As you can see I use a custom "`ls`", for that you need to install **[Exa](https://the.exa.website/)**
+  As you can see I use a custom "`ls`", for that you need to install
+  **[Exa](https://the.exa.website/)**
 </Callout>
