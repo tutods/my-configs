@@ -1,0 +1,135 @@
+import { ImQuotesLeft } from "react-icons/im";
+import { BsGithub } from "react-icons/bs";
+import Bleed from "nextra-theme-docs/bleed";
+import Callout from "nextra-theme-docs/callout";
+import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
+
+# Oh-my-fish <small>(`omf`)</small>
+
+<Bleed>
+  <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
+    <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-cyan-500'} />
+
+    <em>Oh My Fish provides core infrastructure to allow you to install packages which extend or modify the look of your shell. It's fast, extensible and easy to use.</em>
+
+    — by [Oh-my-fish <small>(official repo)</small>](https://github.com/oh-my-fish/oh-my-fish)
+
+  </div>
+</Bleed>
+
+<ExternalLinkButton href="https://github.com/oh-my-fish/oh-my-fish" target="_blank" className={'mt-4 inline-flex items-center gap-2'}>
+  <><BsGithub className={'w-5 h-5'} /> GitHub Repository</>
+</ExternalLinkButton>
+
+## Install
+
+<Callout type="warning" emoji="⚠️️️">
+  To use **Oh-my-fish**, you need install **Fish** shell fist.
+</Callout>
+
+As you can find on official repository, for install the **Oh-my-fish**, you only need to run the following command:
+
+```shell
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+```
+
+## Commands
+
+The first command I use is the `help` command, so: `omf help` - this will list all the commands and options for **Oh-my-fish**.
+The list of commands below are the commands I most use.
+
+- **Install new package:** `omf install <package>` <small>(you can install multiple packages with only one command)</small>;
+- **Search for packages:** `omf search <name-or-partial-name>`;
+- **List local/installed packages:** `omf list`;
+- **Remove/uninstall packages:** `omf remove <package>`;
+- **List themes:** `omf theme`
+- **Update Oh-my-fish:** `omf update`;
+
+## Config
+
+This is my personal configuration for **Oh-my-fish**, here you can find the alias and functions I created for my daily usage.
+
+> **File:** `.config/fish/conf.d/omf.fish`
+
+<Callout type="warning" emoji="⚠️️️">
+If you pretend to use any of my alias/functions, you need to add that specific code after the 4 fist lines and before of the last line (`source ...`)
+</Callout>
+
+### Git Alias & Functions
+```bash
+alias g="git"
+alias gst="git status -sb"
+alias gp="git push"
+alias gl="git pull"
+alias gco="git checkout"
+alias gb="git branch"
+alias gaa="git add ."
+alias ga="git add"
+alias grh="git reset --hard"
+alias gr="git reset"
+
+function goMain
+    git checkout main
+    git pull
+end
+
+function goMaster
+    git checkout master
+    git pull
+end
+
+function goBranch
+    git checkout "$argv"
+    git pull
+end
+
+function commt
+    git add .
+    git commit -m "$argv"
+    git push
+end
+```
+
+### Homebrew Alias
+```bash
+alias bci="brew install --cask"
+alias bi="brew install"
+alias bup="brew update"
+alias bug="brew upgrade"
+alias bcl="brew cleanup"
+alias br="brew remove"
+alias bsearch="brew search"
+```
+
+### Linux <small>(Debian distros)</small> Alias
+```bash
+alias aptI="sudo apt install"
+alias aptR="sudo apt remove"
+alias aptAR="sudo apt autoremove"
+alias aptUp="sudo apt update -y"
+alias aptUpg="sudo apt upgrade -y"
+```
+
+### Docker Alias
+```bash
+alias dps="docker ps --format '{{.Names}}'"
+alias dpst="docker ps --format 'table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Names}}'"
+alias dpsl="docker ps --format='ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n'"
+alias dvunused="docker volume ls -q -f 'dangling=true'"
+```
+
+### Others
+```bash
+# Navigation Alias
+alias work="cd ~/Developer"
+alias home="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Exa on LS
+alias ls="exa --icons"
+```
+
+<Callout type="warning" emoji="⚠️️️">
+  As you can see I use a custom "`ls`", for that you need to install **[Exa](https://the.exa.website/)**
+</Callout>
