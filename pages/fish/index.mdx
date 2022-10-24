@@ -1,21 +1,60 @@
-# Introduction
+import {ExternalLinkButton} from '../../components/Buttons/ExternalLink';
+import Bleed from "nextra-theme-docs/bleed";
+import {ImQuotesLeft} from "react-icons/im";
+import Callout from "nextra-theme-docs/callout";
 
-```js
-// test js
-console.log("hello, world");
+# Get Started
+
+<Bleed>
+    <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
+        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-cyan-500'} />
+
+        <em><strong>fish</strong> is a smart and user-friendly command line
+            shell for Linux, macOS, and the rest of the family.</em>
+
+        — by [Fish <small>(official website)</small>](https://fishshell.com/)
+
+    </div>
+</Bleed>
+
+<ExternalLinkButton href="https://fishshell.com/" className="mt-4 inline-block"><span>Official Website</span></ExternalLinkButton>
+
+## Install
+
+I'm only show the installation guide for **macOS** and **Linux**, but you can easier found the steps for other operating systems on the official
+website.
+
+### macOS
+If you are a **macOS** user, you probably have **[Homebrew](https://brew.sh/)** installed, so, only one command on your terminal and it's done!
+
+```bash
+brew install fish
 ```
 
-```tsx
-import { ReactNode } from "react";
+### Linux <small>(Debian distros)</small>
 
-type Props = {
-  className?: string;
-  children: ReactNode;
-};
+The steps to install the **fish** shell are only 3, and you only need a terminal app.
 
-const Comp = ({ className = "", children }: Props) => {
-  return <div className={`${className}`}>{children}</div>;
-};
+**1.** Install **fish** repository:
+```bash
+sudo apt-add-repository ppa:fish-shell/release-3
+```
+**2.** Update/upgrade repository:
+```bash
+sudo apt-get update && sudo apt-get upgrade
+```
+**3.** Install **fish** shell:
+```bash
+sudo apt-get install fish
 ```
 
-<div className="flex items-center gap-4 text-center text-red-500"></div>
+## Set as default shell
+
+If you want to use **fish** as your default shell you need to run the following command:
+```bash
+sudo chsh -s /usr/local/bin/fish
+```
+
+<Callout emoji="❕" >
+    If on **Visual Studio Code** your shell don't change please follow the steps below.
+</Callout>
