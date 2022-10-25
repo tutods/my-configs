@@ -1,6 +1,6 @@
-import {ExternalLinkButton} from '../../components/Buttons/ExternalLink';
+import { ExternalLinkButton } from "../../components/Buttons/ExternalLink";
 import Bleed from "nextra-theme-docs/bleed";
-import {ImQuotesLeft} from "react-icons/im";
+import { ImQuotesLeft } from "react-icons/im";
 import Callout from "nextra-theme-docs/callout";
 
 # Get Started
@@ -15,9 +15,12 @@ import Callout from "nextra-theme-docs/callout";
         — by [Fish <small>(official website)</small>](https://fishshell.com/)
 
     </div>
+
 </Bleed>
 
-<ExternalLinkButton href="https://fishshell.com/" className="mt-4 inline-block"><span>Official Website</span></ExternalLinkButton>
+<ExternalLinkButton href="https://fishshell.com/" className="mt-4 inline-block">
+  <span>Official Website</span>
+</ExternalLinkButton>
 
 ## Install
 
@@ -25,6 +28,7 @@ I'm only show the installation guide for **macOS** and **Linux**, but you can ea
 website.
 
 ### macOS
+
 If you are a **macOS** user, you probably have **[Homebrew](https://brew.sh/)** installed, so, only one command on your terminal and it's done!
 
 ```bash
@@ -36,14 +40,19 @@ brew install fish
 The steps to install the **fish** shell are only 3, and you only need a terminal app.
 
 **1.** Install **fish** repository:
+
 ```bash
 sudo apt-add-repository ppa:fish-shell/release-3
 ```
+
 **2.** Update/upgrade repository:
+
 ```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
+
 **3.** Install **fish** shell:
+
 ```bash
 sudo apt-get install fish
 ```
@@ -51,10 +60,45 @@ sudo apt-get install fish
 ## Set as default shell
 
 If you want to use **fish** as your default shell you need to run the following command:
+
 ```bash
 sudo chsh -s /usr/local/bin/fish
 ```
 
-<Callout emoji="❕" >
-    If on **Visual Studio Code** your shell don't change please follow the steps below.
+<Callout>
+  If on **Visual Studio Code** your shell don't change please follow the steps
+  below.
 </Callout>
+
+<details>
+    <summary className={'cursor-pointer'}>Linux</summary>
+    <div>
+        ```json
+        {
+            // ...
+            "terminal.integrated.profiles.linux": {
+                "fish": {
+                    "path": "<path-to-fish>"
+                }
+             },
+            "terminal.integrated.defaultProfile.linux": "fish",
+        }
+        ```
+    </div>
+</details>
+<details>
+    <summary className={'cursor-pointer'}>macOS</summary>
+    <div>
+        ```json
+        {
+            // ...
+            "terminal.integrated.profiles.osx": {
+                "fish": {
+                    "path": "<path-to-fish>"
+                }
+            },
+            "terminal.integrated.defaultProfile.osx": "fish",
+        }
+        ```
+    </div>
+</details>
