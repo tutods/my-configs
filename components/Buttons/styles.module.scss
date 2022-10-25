@@ -1,11 +1,11 @@
 .btn {
-  @apply rounded py-2 px-4 no-underline transition-colors duration-100 ease-in-out;
+  @apply rounded py-2 px-4 no-underline transition-colors duration-100 ease-in-out font-medium;
 
   &.btn-primary {
-    @apply bg-cyan-500 text-slate-900;
+    @apply bg-purple-200 text-purple-900;
 
     &:hover {
-      @apply bg-cyan-600;
+      @apply bg-purple-500 text-slate-100;
     }
   }
 }

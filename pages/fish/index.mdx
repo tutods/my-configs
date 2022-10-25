@@ -2,6 +2,7 @@ import { ExternalLinkButton } from "../../components/Buttons/ExternalLink";
 import Bleed from "nextra-theme-docs/bleed";
 import { ImQuotesLeft } from "react-icons/im";
 import Callout from "nextra-theme-docs/callout";
+import { Accordion } from "../../components/Accordion";
 
 # Get Started
 
@@ -70,25 +71,32 @@ sudo chsh -s /usr/local/bin/fish
   below.
 </Callout>
 
-<details>
-    <summary className={'cursor-pointer'}>Linux</summary>
-    <div>
-        ```json
-        {
-            // ...
-            "terminal.integrated.profiles.linux": {
-                "fish": {
-                    "path": "<path-to-fish>"
-                }
-             },
-            "terminal.integrated.defaultProfile.linux": "fish",
-        }
-        ```
-    </div>
-</details>
-<details>
-    <summary className={'cursor-pointer'}>macOS</summary>
-    <div>
+1. Open your **Visual Studio Code**;
+2. Open the `settings.json` (not the settings UI);
+3. Add the code inside the **JSON** curly brackets.
+
+<Accordion title={"Linux"} className={'mt-2'}>
+<>
+    ```json
+    {
+        // ...
+        "terminal.integrated.profiles.linux": {
+            "fish": {
+                "path": "<path-to-fish>"
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "fish",
+    }
+    ```
+
+    > **How to get `<path-to-fish>`:** `which fish`
+
+</>
+</Accordion>
+
+<Accordion title={"macOS"} className={'mt-2'}>
+    <>
+
         ```json
         {
             // ...
@@ -100,5 +108,22 @@ sudo chsh -s /usr/local/bin/fish
             "terminal.integrated.defaultProfile.osx": "fish",
         }
         ```
-    </div>
-</details>
+
+        > **How to get `<path-to-fish>`:** `which fish`
+    </>
+
+</Accordion>
+
+<div className={"my-3"} />
+
+<Callout>
+  If you are using **Hyper** terminal, and your shell don't change please follow
+  the steps below.
+</Callout>
+
+1. Open in your **IDE** the file `.hyper.js` (is in your user root folder);
+   - Normally, I do: `code ~/.hyper.js` to open in my **Visual Studio Code**.
+1. Search for `shell:` inside the `config:` object;
+1. Change for your **fish** path.
+   - **Example:** `shell: '/usr/bin/fish',`;
+   - **Remember:** `/usr/bin/fish` is the path for the **fish** installation (you can get it using `which fish`).
