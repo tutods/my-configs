@@ -1,10 +1,10 @@
 .accordion {
 
   &>summary {
-    @apply flex items-center justify-between cursor-pointer gap-2 w-full rounded bg-purple-100 px-4 py-2 text-left font-medium text-purple-900;
+    @apply flex items-center justify-between cursor-pointer gap-2 w-full rounded bg-blue-100 px-4 py-2 text-left font-medium text-blue-900;
 
     &:hover {
-      @apply bg-purple-200;
+      @apply bg-blue-200;
     }
 
     &:focus {
@@ -12,7 +12,7 @@
     }
 
     &:focus-visible {
-      @apply ring ring-purple-500 ring-opacity-75;
+      @apply ring ring-blue-500 ring-opacity-75;
     }
 
     &::marker {
