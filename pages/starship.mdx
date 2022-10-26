@@ -60,6 +60,49 @@ Below you can find how to install the **Starship** on **macOS** and **Linux**. I
 [starship-url]: https://starship.rs/
 [nerdfonts-url]: https://www.nerdfonts.com/
 
+## Setup shell to use **Starship**
+
+<Accordion title={'Fish'} className={'mt-2'}>
+	<div>
+		<ol>
+			<li>
+				Open the <strong>Fish</strong>configuration file in your <strong>IDE</strong>;
+				<ul className={'mt-0'}>
+					<li>
+						<strong>File location:</strong>
+						<code>~/.config/fish/config.fish</code>
+					</li>
+				</ul>
+			</li>
+			<li>Add the code below on the end of the file.</li>
+		</ol>
+		<pre>
+			<code className={'prism-code language-shell'}>starship init fish | source</code>
+		</pre>
+	</div>
+</Accordion>
+<Accordion title={'ZSH'} className={'mt-2'}>
+	<div>
+		<ol>
+			<li>
+				Open the <strong>ZSH</strong>configuration file in your <strong>IDE</strong>;
+				<ul className={'mt-0'}>
+					<li>
+						<strong>File location:</strong>
+						<code>~/.zshrc</code>
+					</li>
+				</ul>
+			</li>
+			<li>Add the code below on the end of the file.</li>
+		</ol>
+		```bash
+
+            eval "$(starship init zsh)"
+        ```
+    </div>
+
+</Accordion>
+
 ## Config. File
 
 The configuration file of **Starship** is located on `~/.config/starship.toml`
