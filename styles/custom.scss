@@ -3,5 +3,13 @@ html {
 }
 
 a {
-	@apply text-slate-800 underline transition-colors duration-150 ease-in-out hover:text-blue-700;
+	@apply text-slate-800 underline transition-colors duration-150 ease-in-out;
+
+	&:hover {
+		@apply text-blue-700;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		@apply text-slate-300;
+	}
 }
