@@ -1,0 +1,61 @@
+import { URLs } from "../data/constants/urls";
+import Bleed from "nextra-theme-docs/bleed";
+import { ImQuotesLeft } from "react-icons/im";
+import { ExternalLinkButton } from "../components/Buttons/ExternalLink";
+import { Accordion } from "../components/Accordion";
+import { BiCloudDownload } from "react-icons/bi";
+
+# Starship
+
+<Bleed>
+    <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
+        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-blue-500'} />
+
+        <em>The minimal, blazing-fast, and infinitely customizable prompt for any shell!</em>
+
+        — by <a href={URLs.starship} target={'_blank'}>Starship <small>(official website)</small></a>
+
+    </div>
+
+</Bleed>
+
+<ExternalLinkButton
+  target={"_blank"}
+  href={URLs.starship}
+  className="mt-4 inline-block"
+>
+  <span>Official Website</span>
+</ExternalLinkButton>
+
+## Prerequisites
+
+As you can see on the [official website][starship-url], the only requirement is to have a [**Nerd Font**][nerdfonts-url] to use. I leave to you
+the link of the font I normally use.
+
+<ExternalLinkButton
+  href={
+    "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/CascadiaCode.zip"
+  }
+  target={"_blank"}
+  className={"mt-2 mb-4 inline-flex items-center gap-2"}
+>
+  <BiCloudDownload className={"h-6 w-6"} />
+  <span>Caskaydia Cove Nerd Font</span>
+</ExternalLinkButton>
+
+## How to install
+
+Below you can find how to install the **Starship** on **macOS** and **Linux**. If you are a **Windows** user, please see the instructions on the
+[official website][starship-url]
+
+<Accordion title={'Linux & macOS'} className={'mt-2'}>
+If you are a **Linux** or a **macOS** user, you need to run the following command on your terminal:
+
+```bash
+    curl -sS https://starship.rs/install.sh | sh
+```
+
+</Accordion>
+
+[starship-url]: https://starship.rs/
+[nerdfonts-url]: https://www.nerdfonts.com/

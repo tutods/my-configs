@@ -1,6 +1,6 @@
 {
   "index": "Introduction",
   "fish": "Fish",
-  "zsh": "Zsh",
-  "spaceship": "Spaceship"
+  "zsh": "ZSH",
+  "starship": "Starship"
 }

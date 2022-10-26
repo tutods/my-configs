@@ -8,18 +8,22 @@ import { Accordion } from "../../components/Accordion";
 
 <Bleed>
     <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
-        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-cyan-500'} />
+        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-blue-500'} />
 
         <em><strong>fish</strong> is a smart and user-friendly command line
             shell for Linux, macOS, and the rest of the family.</em>
 
-        — by [Fish <small>(official website)</small>](https://fishshell.com/)
+        — by <a href={URLs.fish} target={'_blank'}>Fish <small>(official website)</small></a>
 
     </div>
 
 </Bleed>
 
-<ExternalLinkButton href="https://fishshell.com/" className="mt-4 inline-block">
+<ExternalLinkButton
+  target={"_blank"}
+  href={URLs.fish}
+  className="mt-4 inline-block"
+>
   <span>Official Website</span>
 </ExternalLinkButton>
 
