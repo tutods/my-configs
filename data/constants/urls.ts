@@ -4,5 +4,6 @@ export const URLs = {
 	zsh: '',
 	ohMyZsh: '',
 	starship: 'https://starship.rs/',
-	nerdFont: 'https://www.nerdfonts.com/'
+	nerdFont: 'https://www.nerdfonts.com/',
+	dracula: 'https://draculatheme.com'
 };

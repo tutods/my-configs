@@ -1,36 +1,39 @@
 .accordion {
+	& > summary {
+		@apply flex w-full cursor-pointer items-center justify-between gap-2 rounded bg-blue-100 px-4 py-2 text-left font-bold text-blue-900;
 
-  &>summary {
-    @apply flex items-center justify-between cursor-pointer gap-2 w-full rounded bg-blue-100 px-4 py-2 text-left font-medium text-blue-900;
+		&:hover {
+			@apply bg-blue-200;
+		}
 
-    &:hover {
-      @apply bg-blue-200;
-    }
+		&:focus {
+			@apply outline-none;
+		}
 
-    &:focus {
-      @apply outline-none;
-    }
+		&:focus-visible {
+			@apply ring ring-blue-500 ring-opacity-75;
+		}
 
-    &:focus-visible {
-      @apply ring ring-blue-500 ring-opacity-75;
-    }
+		&::marker {
+			list-style: none;
+		}
 
-    &::marker {
-      list-style: none;
-    }
+		&::-webkit-details-marker {
+			display: none;
+		}
 
-    svg {
-      @apply w-6 h-6;
-    }
-  }
+		svg {
+			@apply h-6 w-6;
+		}
+	}
 
-  &[open] {
-    &>summary>svg {
-      transform: rotate(180deg);
-    }
-  }
+	&[open] {
+		& > summary > svg {
+			transform: rotate(180deg);
+		}
+	}
 
-  &>div {
-    @apply px-2 py-2;
-  }
+	& > div {
+		@apply px-2 py-2;
+	}
 }

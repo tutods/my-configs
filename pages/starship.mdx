@@ -2,6 +2,7 @@ import { URLs } from "../data/constants/urls";
 import Bleed from "nextra-theme-docs/bleed";
 import { ImQuotesLeft } from "react-icons/im";
 import { ExternalLinkButton } from "../components/Buttons/ExternalLink";
+import { ExternalLink } from "../components/ExternalLink";
 import { Accordion } from "../components/Accordion";
 import { BiCloudDownload } from "react-icons/bi";
 
@@ -106,16 +107,55 @@ Below you can find how to install the **Starship** on **macOS** and **Linux**. I
 ## Config. File
 
 The configuration file of **Starship** is located on `~/.config/starship.toml`
+This is a personal choice topic, but I will leave my current configuration, using the **Dracula Theme** colors.
+
+If you don't waste time with personalization, you can use some of the presets offered by **Starship** <small>(please visit the link below)</small>.
+
+<ExternalLinkButton href="https://starship.rs/presets/" target="_blank">
+  <span>
+    <strong>Starship</strong> Presets
+  </span>
+</ExternalLinkButton>
 
 ### Dracula Theme
 
+<p>
+  The file below is my configuration using{" "}
+  <ExternalLink href={URLs.dracula} className="font-bold">
+    <>Dracula Theme</>
+  </ExternalLink>{" "}
+  colors.
+</p>
+
+<ExternalLinkButton
+  href={"https://github.com/dracula/starship/archive/master.zip"}
+  target={"_blank"}
+  className={"mt-2 mb-4 inline-flex items-center gap-2"}
+>
+  <BiCloudDownload className={"h-6 w-6"} />
+  <span>
+    <strong>Dracula Theme</strong> - original config.
+  </span>
+</ExternalLinkButton>
+
 ```shell
-[aws]
-style = "bold #ffb86c"
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
 
 [character]
-error_symbol = "[λ](bold #ff5555)"
-success_symbol = "[λ](bold #50fa7b)"
+error_symbol = "[✕](bold #ff5555)"
+success_symbol = "[➜](bold #50fa7b)"
+
+[docker_context]
+format = "via [$symbol$context]($style) "
+symbol="🐳 "
+detect_files=["docker-compose.yml", "docker-compose.yaml","docker-compose.dev.yaml", "docker-compose.dev.yml", "Dockerfile"]
+
+[aws]
+style = "bold #ffb86c"
 
 [cmd_duration]
 style = "bold #f1fa8c"
@@ -135,5 +175,4 @@ style = "bold #bd93f9"
 [username]
 format = "[$user]($style) on "
 style_user = "bold #8be9fd"
-
 ```

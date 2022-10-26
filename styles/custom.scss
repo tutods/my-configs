@@ -1,0 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	@apply text-slate-800 underline transition-colors duration-150 ease-in-out hover:text-blue-700;
+}
