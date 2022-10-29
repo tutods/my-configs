@@ -8,8 +8,10 @@ a {
 	&:hover {
 		@apply text-blue-700;
 	}
+}
 
-	@media (prefers-color-scheme: dark) {
+.dark {
+	a {
 		@apply text-slate-300;
 	}
 }
