@@ -5,5 +5,6 @@ export const URLs = {
 	ohMyZsh: '',
 	starship: 'https://starship.rs/',
 	nerdFont: 'https://www.nerdfonts.com/',
-	dracula: 'https://draculatheme.com'
+	dracula: 'https://draculatheme.com',
+	licensePlugin: 'https://github.com/oh-my-fish/plugin-license'
 };
