@@ -67,9 +67,16 @@ sudo apt-get install fish
 
 If you want to use **fish** as your default shell you need to run the following command:
 
-```bash
-sudo chsh -s /usr/local/bin/fish
+```shell
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
 ```
+
+> **Remember:** `/usr/local/bin/fish` is the path of your **fish** installation. To get the path run `which fish`.
+
+### Common Problems
+
+#### Visual Studio Code
 
 <Callout>
   If on **Visual Studio Code** your shell don't change please follow the steps
@@ -85,38 +92,14 @@ sudo chsh -s /usr/local/bin/fish
     ```json
     {
         // ...
-        "terminal.integrated.profiles.linux": {
-            "fish": {
-                "path": "<path-to-fish>"
-            }
-        },
         "terminal.integrated.defaultProfile.linux": "fish",
     }
     ```
-
-    > **How to get `<path-to-fish>`:** `which fish`
-
 </>
 </Accordion>
 
 <Accordion title={"macOS"} className={'mt-2'}>
     <>
-
-        ```json
-        {
-            // ...
-            "terminal.integrated.profiles.osx": {
-                "fish": {
-                    "path": "<path-to-fish>"
-                }
-            },
-            "terminal.integrated.defaultProfile.osx": "fish",
-        }
-        ```
-
-        > **How to get `<path-to-fish>`:** `which fish`
-
-    	On my case works only with the line below:
     	```json
     	{
     		// ...
@@ -128,6 +111,8 @@ sudo chsh -s /usr/local/bin/fish
 </Accordion>
 
 <div className={"my-3"} />
+
+#### Hyper Terminal
 
 <Callout>
   If you are using **Hyper** terminal, and your shell don't change please follow

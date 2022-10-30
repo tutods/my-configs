@@ -1,12 +1,12 @@
 module.exports = {
 	github: 'https://github.com/tutods/my-configs',
 	docsRepositoryBase: 'https://github.com/tutods/my-configs/blob/master',
-	titleSuffix: ' | TutoDS',
+	titleSuffix: ' | TutoDS Configs',
 	logo: (
 		<>
 			<span className={'mr-2 hidden font-extrabold md:inline'}>TutoDS</span>
 			<span className={'hidden font-normal text-gray-600 md:inline'}>
-				My Configurations for Zsh, Fish and others..
+				My Configurations for Fish, ZSH and more..
 			</span>
 		</>
 	),
@@ -16,15 +16,15 @@ module.exports = {
 			<meta content={'#ffffff'} name={'theme-color'} />
 			<meta content={'width=device-width, initial-scale=1.0'} name={'viewport'} />
 			<meta content={'en'} httpEquiv={'Content-Language'} />
-			<meta content={'Nextra: the Next.js site builder'} name={'description'} />
-			<meta content={'Nextra: the Next.js site builder'} name={'og:description'} />
+			<meta content={'TudoDS Configs. for Fish, ZSH and others'} name={'description'} />
+			<meta content={'TudoDS Configs. for Fish, ZSH and others'} name={'og:description'} />
 			<meta content={'summary_large_image'} name={'twitter:card'} />
-			<meta content={'https://nextra.vercel.app/og.png'} name={'twitter:image'} />
-			<meta content={'musketgeeks.netlify.app'} name={'twitter:site:domain'} />
-			<meta content={'https://musketgeeks.netlify.app'} name={'twitter:url'} />
-			<meta content={'musketgeeks: Project Documentation'} name={'og:title'} />
-			<meta content={'https://nextra.vercel.app/og.png'} name={'og:image'} />
-			<meta content={'musketgeeks'} name={'apple-mobile-web-app-title'} />
+			<meta content={'https://my-configs.vercel.app/og.png'} name={'twitter:image'} />
+			<meta content={'my-configs.vercel.app'} name={'twitter:site:domain'} />
+			<meta content={'https://my-configs.vercel.app'} name={'twitter:url'} />
+			<meta content={'TutoDS | My Configs+'} name={'og:title'} />
+			<meta content={'https://my-configs.vercel.app/og.png'} name={'og:image'} />
+			<meta content={'TutoDS | My Configs'} name={'apple-mobile-web-app-title'} />
 			<link href={'/apple-icon-180x180.png'} rel={'apple-touch-icon'} sizes={'180x180'} />
 			<link
 				href={'/android-icon-192x192.png'}
@@ -41,6 +41,7 @@ module.exports = {
 	search: true,
 	prevLinks: true,
 	nextLinks: true,
+	floatTOC: true,
 	footer: true,
 	footerEditLink: false,
 	footerText: (
