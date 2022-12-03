@@ -1,24 +1,22 @@
-import { ExternalLinkButton } from "../../components/Buttons/ExternalLink";
-import Bleed from "nextra-theme-docs/bleed";
-import { ImQuotesLeft } from "react-icons/im";
-import Callout from "nextra-theme-docs/callout";
-import { Accordion } from "../../components/Accordion";
-import { URLs } from "../../data/constants/urls";
+import { URLs } from "@/data/constants/urls";
+import { Quote } from "@components/Quote";
+import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
+import { Callout, Tab, Tabs } from "nextra-theme-docs";
+import { Accordion } from "@/components/Accordion";
 
 # Get Started
 
-<Bleed>
-    <div style={{ border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center' }}>
-        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-blue-500'} />
-
-        <em><strong>fish</strong> is a smart and user-friendly command line
-            shell for Linux, macOS, and the rest of the family.</em>
-
-        — from <a href={URLs.fish} target={'_blank'}>Fish <small>(official website)</small></a>
-
-    </div>
-
-</Bleed>
+<Quote
+  className={"my-2"}
+  from={
+    <a className={"underline"} href={URLs.fish} target={"_blank"}>
+      Fish <small>(official website)</small>
+    </a>
+  }
+>
+  <strong>fish</strong> is a smart and user-friendly command line shell for
+  Linux, macOS, and the rest of the family.
+</Quote>
 
 <ExternalLinkButton
   target={"_blank"}
@@ -33,41 +31,45 @@ import { URLs } from "../../data/constants/urls";
 I'm only show the installation guide for **macOS** and **Linux**, but you can easier found the steps for other operating systems on the official
 website.
 
-### macOS
+<Tabs items={['macOS', <>Linux <small>(Debian distros.)</small></>]}>
+    <Tab>
+        If you are a **macOS** user, you probably have **[Homebrew](https://brew.sh/)** installed, so, only one command
+        on your terminal and it's done!
 
-If you are a **macOS** user, you probably have **[Homebrew](https://brew.sh/)** installed, so, only one command on your terminal and it's done!
+        ```shell copy
+        brew install fish
+        ```
+    </Tab>
+    <Tab>
+        The steps to install the **fish** shell are only 3, and you only need a terminal app.
 
-```bash
-brew install fish
-```
+        **1.** Install **fish** repository:
 
-### Linux <small>(Debian distros)</small>
+        ```shell copy
+        sudo apt-add-repository ppa:fish-shell/release-3
+        ```
 
-The steps to install the **fish** shell are only 3, and you only need a terminal app.
+        **2.** Update/upgrade repository:
 
-**1.** Install **fish** repository:
+        ```shell copy
+        sudo apt-get update && sudo apt-get upgrade
+        ```
 
-```bash
-sudo apt-add-repository ppa:fish-shell/release-3
-```
+        **3.** Install **fish** shell:
 
-**2.** Update/upgrade repository:
+        ```shell copy
+        sudo apt-get install fish
+        ```
 
-```bash
-sudo apt-get update && sudo apt-get upgrade
-```
+    </Tab>
 
-**3.** Install **fish** shell:
-
-```bash
-sudo apt-get install fish
-```
+</Tabs>
 
 ## Set as default shell
 
 If you want to use **fish** as your default shell you need to run the following command:
 
-```shell
+```shell copy
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 ```
@@ -76,52 +78,51 @@ chsh -s /usr/local/bin/fish
 
 ### Common Problems
 
-#### Visual Studio Code
+<Tabs items={['Visual Studio Code', <>Hyper <small>(terminal)</small></>]}>
+    <Tab>
+        <Callout>
+            If on your **Visual Studio Code** the shell don't change please follow the steps
+            below.
+        </Callout>
 
-<Callout>
-  If on **Visual Studio Code** your shell don't change please follow the steps
-  below.
-</Callout>
+        1. Open your **Visual Studio Code**;
+        2. Open the `settings.json` (not the settings UI);
+        3. Add the code inside the **JSON** curly brackets.
 
-1. Open your **Visual Studio Code**;
-2. Open the `settings.json` (not the settings UI);
-3. Add the code inside the **JSON** curly brackets.
+        <Accordion title={"macOS"} className={'mt-2'}>
+            <>
+                ```json copy
+                {
+                    // ...
+                    "terminal.integrated.defaultProfile.osx": "fish",
+                }
+                ```
+            </>
+        </Accordion>
+        <Accordion title={"Linux"} className={'mt-2'}>
+            <>
+                ```json copy
+                {
+                    // ...
+                    "terminal.integrated.defaultProfile.linux": "fish",
+                }
+                ```
+            </>
+        </Accordion>
+    </Tab>
+    <Tab>
+        <Callout>
+            If you are using **Hyper** terminal, and the shell don't change please follow
+            the steps below.
+        </Callout>
 
-<Accordion title={"Linux"} className={'mt-2'}>
-<>
-    ```json
-    {
-        // ...
-        "terminal.integrated.defaultProfile.linux": "fish",
-    }
-    ```
-</>
-</Accordion>
+        1. Open in your **IDE** the file `.hyper.js` (is in your user root folder);
+        - Normally, I do: `code ~/.hyper.js` to open in my **Visual Studio Code**.
+        1. Search for `shell:` inside the `config:` object;
+        1. Change for your **fish** path.
+        - **Example:** `shell: '/usr/bin/fish',`;
+        - **Remember:** `/usr/bin/fish` is the path for the **fish** installation (you can get it using `which fish`).
 
-<Accordion title={"macOS"} className={'mt-2'}>
-    <>
-    	```json
-    	{
-    		// ...
-    		"terminal.integrated.defaultProfile.osx": "fish",
-    	}
-    	```
-    </>
+    </Tab>
 
-</Accordion>
-
-<div className={"my-3"} />
-
-#### Hyper Terminal
-
-<Callout>
-  If you are using **Hyper** terminal, and your shell don't change please follow
-  the steps below.
-</Callout>
-
-1. Open in your **IDE** the file `.hyper.js` (is in your user root folder);
-   - Normally, I do: `code ~/.hyper.js` to open in my **Visual Studio Code**.
-1. Search for `shell:` inside the `config:` object;
-1. Change for your **fish** path.
-   - **Example:** `shell: '/usr/bin/fish',`;
-   - **Remember:** `/usr/bin/fish` is the path for the **fish** installation (you can get it using `which fish`).
+</Tabs>

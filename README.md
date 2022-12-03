@@ -1,95 +1,23 @@
-# My Configs
+# Nextra Docs Template
 
-In this repository you can find my configs for:
+This is a template for creating documentation with [Nextra](https://nextra.site).
 
-- [Hyper Terminal](https://hyper.is/)
-- [Oh-my-zsh](https://ohmyz.sh/)
+[**Live Demo →**](https://nextra-docs-template.vercel.app)
 
-This configs help me to improve my workflow on terminal, using some alias (on **\*oh-my-zsh**)and run some commands again (**ZSH AutoSuggestions**).
+[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
-If this repo is useful for you give a star!
+## Quick Start
 
-# Oh-my-zsh
+Click the button to clone this repository and deploy it on Vercel:
 
-## 🎨 Theme
+[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
 
-### Spaceship
+## Local Development
 
-🔗 **Repo:** [URL](https://github.com/denysdovhan/spaceship-prompt)
+First, run `pnpm i` to install the dependencies.
 
-📁 **File:** `.zshrc`
+Then, run `pnpm dev` to start the development server and visit localhost:3000.
 
-#### 📖 **How To Use:**
+## License
 
-- Clone: `git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"`
-- Link: `ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
-- Set theme: `ZSH_THEME="spaceship"`
-
-#### Custom Options
-
-You can customize some things on this theme, for that see this [link](https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md)
-
-## Custom Plugins
-
-In my **`.zshrc`** file, I have 3 custom plugins, and to install follow the steps on plugins repository:
-
-- **[Fast Syntax Highlighting by _zdharma_](https://github.com/zdharma/fast-syntax-highlighting)**
-- **[ZSH Autosuggestions by _zsh-users_](https://github.com/zsh-users/zsh-autosuggestions)**
-- **[ZSH Completions by _zsh-users_](https://github.com/zsh-users/zsh-completions)**
-- **[OMZ Homebrew](https://github.com/digitalraven/omz-homebrew)**
-
-# Hyper
-
-📁 **File:** `.hyper.js`
-
-![Hyper Terminal](https://i.ibb.co/FndX03L/image.png)
-
-## Window Buttons like macOS
-
-In **Linux** you can use [this plugin](https://github.com/krve/hyper-mac-controls) to put window controls like macOS.
-
-Only need add in `plugins` array the value `'hyper-mac-controls'`
-
-## How to Remove `%` symbol when start
-
-- Add on `.zhsrc` file this line:
-
-```bash
-### Remove % Symbol on Hyper
-unsetopt PROMPT_SP
-```
-
-> Already added on my `.zshrc` config
-
-## ➕ Plugins
-
-- `hyper-mac-controls`
-- `hyper-custom-controls`
-- `hyper-tabs-enhanced`
-- `hypercwd`
-- `hyper-search`
-- `hyper-statusline`
-
-## 🎨 Theme
-
-💬 **Name:** Dracula <small>(I have used this theme ok)</small>
-
-🔗 **Repo:** [URL](https://github.com/dracula/hyper)
-
-### 📖 How to install?
-
-Run on your terminal this command:
-
-```bash
-hyper install hyper-dracula
-```
-
-But, if you copy my config not need install, only copy and paste on your `.hyper.js` file
-
-### 📖 How to use?
-
-After install you only need add on `plugins: []` a new entry:
-
-```javascript
-plugins: ['hyper-dracula'],
-```
+This project is licensed under the MIT License.

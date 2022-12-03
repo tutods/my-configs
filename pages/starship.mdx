@@ -1,24 +1,23 @@
-import { URLs } from "../data/constants/urls";
-import Bleed from "nextra-theme-docs/bleed";
-import { ImQuotesLeft } from "react-icons/im";
-import { ExternalLinkButton } from "../components/Buttons/ExternalLink";
-import { ExternalLink } from "../components/ExternalLink";
-import { Accordion } from "../components/Accordion";
+import { URLs } from "@/data/constants/urls";
+import { Quote } from "@components/Quote";
+import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
+import { Callout, Tab, Tabs } from "nextra-theme-docs";
+import { ExternalLink } from "@components/ExternalLink";
+import { Accordion } from "@/components/Accordion";
 import { BiCloudDownload } from "react-icons/bi";
 
 # Starship
 
-<Bleed>
-    <div style={{border: '1px solid #888', padding: '4rem 2.5rem', textAlign: 'center'}}>
-        <ImQuotesLeft className={'w-10 h-10 mx-auto mb-4 text-blue-500'}/>
-
-        <em>The minimal, blazing-fast, and infinitely customizable prompt for any shell!</em>
-
-        — from <a href={URLs.starship} target={'_blank'}>Starship <small>(official website)</small></a>
-
-    </div>
-
-</Bleed>
+<Quote
+  className={"my-2"}
+  from={
+    <a href={URLs.starship} target={"_blank"}>
+      Starship <small>(official website)</small>
+    </a>
+  }
+>
+  The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+</Quote>
 
 <ExternalLinkButton
   target={"_blank"}
@@ -30,7 +29,7 @@ import { BiCloudDownload } from "react-icons/bi";
 
 ## Prerequisites
 
-As you can see on the [official website][starship-url], the only requirement is to have a [**Nerd Font**][nerdfonts-url] installed to use. I leave
+As you can see on the [official website](https://starship.rs/), the only requirement is to have a [**Nerd Font**](https://www.nerdfonts.com/) installed to use.I leave
 the link of the font I normally use.
 
 <ExternalLinkButton
@@ -44,67 +43,60 @@ the link of the font I normally use.
   <span>Caskaydia Cove Nerd Font</span>
 </ExternalLinkButton>
 
+Other cool font (the currently I'm using) is **MesloLGS**, by the way, this font is recommended to install when you run **Oh My Zsh** with **Powerlevel10k** on **iTerm2**. If you want to try you have the download link below. 👇
+
+<ExternalLinkButton
+  href={
+    "https://github.com/romkatv/powerlevel10k-media/blob/master/MesloLGS%20NF%20Regular.ttf"
+  }
+  target={"_blank"}
+  className={"mt-2 mb-4 inline-flex items-center gap-2"}
+>
+  <BiCloudDownload className={"h-6 w-6"} />
+  <span>MesloLGS Font</span>
+</ExternalLinkButton>
+
 ## How to install
 
 Below you can find how to install the **Starship** on **macOS** and **Linux**. If you are a **Windows** user, please see the instructions on the
-[official website][starship-url].
+[official website](https://starship.rs/).
 
 <Accordion title={'Linux & macOS'} className={'mt-2'}>
-    If you are a **Linux** or a **macOS** user, you need to run the following command on your terminal:
+    <>
 
-    ```bash
-    curl -sS https://starship.rs/install.sh | sh
-    ```
+        If you are a **Linux** or a **macOS** user, you need to run the following command on your terminal:
+
+        ```shell copy
+        curl -sS https://starship.rs/install.sh | sh
+        ```
+
+    </>
 
 </Accordion>
-
-[starship-url]: https://starship.rs/
-[nerdfonts-url]: https://www.nerdfonts.com/
 
 ## Setup shell to use **Starship**
 
-<Accordion title={'Fish'} className={'mt-2'}>
-	<div>
-		<ol>
-			<li>
-				Open the <strong>Fish</strong>configuration file in your <strong>IDE</strong>;
-				<ul className={'mt-0'}>
-					<li>
-						<strong>File location:</strong>
-						<code>~/.config/fish/config.fish</code>
-					</li>
-				</ul>
-			</li>
-			<li>Add the code below on the end of the file.</li>
-		</ol>
-		<pre>
-			<code className={'prism-code language-shell'}>starship init fish | source</code>
-		</pre>
-	</div>
-</Accordion>
-<Accordion title={'ZSH'} className={'mt-2'}>
-	<div>
-		<ol>
-			<li>
-				Open the <strong>ZSH</strong>configuration file in your <strong>IDE</strong>;
-				<ul className={'mt-0'}>
-					<li>
-						<strong>File location:</strong>
-						<code>~/.zshrc</code>
-					</li>
-				</ul>
-			</li>
-			<li>Add the code below on the end of the file.</li>
-		</ol>
-		```bash
+<Tabs items={["Fish", "Zsh"]}>
+    <Tab>
+        - Open the **Fish** configuration file in your **IDE**;
+        - Add the code below on the end of the file.,
 
-            eval "$(starship init zsh)"
+        ```bash filename="~/.config/fish/config.fish" copy
+        starship init fish | source
         ```
-    </div>
+    </Tab>
+    <Tab>
+        - Open the **Zsh** configuration file in your **IDE**;
+        - Add the code below on the end of the file.
 
-</Accordion>
+        ```bash filename="~/.zshrc" copy
+        eval "$(starship init zsh)"
+        ```
+    </Tab>
 
-## Config. File
+</Tabs>
+
+## Config.File
 
 The configuration file of **Starship** is located on `~/.config/starship.toml`
 This is a personal choice topic, but I will leave my current configuration, using the **Dracula Theme** colors.
@@ -142,7 +134,7 @@ If you don't waste time with personalization, you can use some of the presets of
   </span>
 </ExternalLinkButton>
 
-```shell
+```shell filename="~/.config/starship.toml" copy
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 

@@ -1,0 +1,152 @@
+import Image from "next/image";
+import { URLs } from "@/data/constants/urls";
+import { Quote } from "@components/Quote";
+import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
+import { Callout, Tab, Tabs } from "nextra-theme-docs";
+import { ExternalLink } from "@components/ExternalLink";
+import { Accordion } from "@/components/Accordion";
+import { BiCloudDownload } from "react-icons/bi";
+
+# Hyper™
+
+<div className={"relative h-[300px] rounded shadow md:h-[700px]"}>
+  <Image
+    className={"mx-auto"}
+    className={"object-cover"}
+    src={"/media/hyper.png"}
+    fill
+  />
+</div>
+
+**Hyper** is a terminal fully customizable, and this is the goal of the team who works on this project. With that, **Hyper** allows us to install themes and plugins, but if you want, you can create a your own plugin or theme!
+
+## How to install
+
+On this step I will show you how to install **Hyper™** terminal on **macOS** and **Linux**, but you can check on the link below other ways how to install and the details for other operating systems.
+
+<ExternalLinkButton
+  href={"https://hyper.is/#installation"}
+  target={"_blank"}
+  className={"mt-2 mb-4 inline-flex items-center gap-2"}
+>
+  <BiCloudDownload className={"h-6 w-6"} />
+  <span>
+    Installation - <strong>Hyper™</strong>
+  </span>
+</ExternalLinkButton>
+
+<Tabs items={['macOS', <>Linux <small>(Debian distros.)</small></>]}>
+    <Tab>
+        Again **Homebrew** it's your best friend when you need to install anything, and **Hyper™** it's not an
+        exception.
+
+        ```bash copy
+        brew install --cask hyper
+        ```
+    </Tab>
+    <Tab>
+        On **Linux** you can easly download the `.deb` file and install, but if you prefer to do this using the terminal
+        the steps are:
+        1. **Download the `.deb` file:** `wget -O hyper-install.deb https://releases.hyper.is/download/deb`;
+        2. **Install it:** `sudo gdebi hyper-install.deb`;
+        3. Done, you can launch the **Hyper™** using the command `hyper`.
+
+        <Callout emoji="⚠️️️">
+            You need to have installed `wget` or change this command to use `curl`.
+        </Callout>
+    </Tab>
+
+</Tabs>
+
+## Configuration
+
+The most important step!
+Now, is the time about configurations and perosnalization of your **Hyper™**. I will split into two "steps", the first one remove unnecessary configurations and step two the configurations to add.
+
+Before start, the **Hyper™** configuration file is located on `~/.hyper.js` and, usually, I open this file using my **VSCode** (`code ~/.hyper.js`).
+
+### Clean your configuration file!
+
+One this step you can remove the lines I will show you or only comment the line itself. In my case, I only remove settings related with colors to have sure the colors used is from my theme.
+
+```js filename="~/.hyper.js" {1-2,27-28} copy
+module.exports = {
+  config: {
+    // ...
+    cursorColor: "rgba(248,28,229,0.8)",
+    selectionColor: "rgba(248,28,229,0.3)",
+    colors: {
+      black: "#000000",
+      red: "#C51E14",
+      green: "#1DC121",
+      yellow: "#C7C329",
+      blue: "#0A2FC4",
+      magenta: "#C839C5",
+      cyan: "#20C5C6",
+      white: "#C7C7C7",
+      lightBlack: "#686868",
+      lightRed: "#FD6F6B",
+      lightGreen: "#67F86F",
+      lightYellow: "#FFFA72",
+      lightBlue: "#6A76FB",
+      lightMagenta: "#FD7CFC",
+      lightCyan: "#68FDFE",
+      lightWhite: "#FFFFFF",
+      limeGreen: "#32CD32",
+      lightCoral: "#F08080",
+    },
+    // ...
+  },
+};
+```
+
+> **Note:** the lines highlighted isn't to remove, you need this lines for your configuration works!
+
+### Let's customize!
+
+First we will configure our plugins, by the way, when you restart your **Hyper™** terminal, the plugins and themes will be installed automatically.
+
+```js {5-12} filename="~/.hyper.js" copy
+module.exports = {
+  config: {
+    // ...
+  },
+  plugins: [
+    "hyper-font-ligatures",
+    "hyper-search",
+    "hyper-pane",
+    "hypercwd",
+    "hyper-dracula",
+    "hyper-tabs-enhanced",
+  ],
+};
+```
+
+> **Note:** only add the lines highlighted, when you install the **Hyper™** terminal the `plugins` will have an empty array.
+
+**Short description about the plugins added:**
+
+- `hyper-font-ligatures`: enable font ligatures (for icons and more);
+- `hyper-dracula`: is the theme I'm using at the moment;
+- `hyper-search`: for search text on our terminal;
+- `hypecwd`: open new tabs or panels in the same directory;
+- `hyper-tabs-enhanced`: enhance **Hyper™** tabs.
+
+So, for `hyper-tabs-enhanced` I have a custom configuration, and if you want the same you only need to past the code below on the end of `config` object.
+
+```js {4-9} filename="~/.hyper.js" copy
+module.exports = {
+  config: {
+    // ...
+    hyperTabs: {
+      trafficButtons: true,
+      tabIcons: true,
+      tabIconsColored: true,
+      border: false,
+    },
+  },
+  // ...
+};
+```
+
+> **Note:** only add the lines highlighted.

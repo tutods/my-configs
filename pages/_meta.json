@@ -1,0 +1,17 @@
+{
+  "index": "Introduction",
+  "fish": "Fish",
+  "starship": "Starship",
+  "hyper": "Hyper™",
+  "about": {
+    "title": "About",
+    "type": "page",
+    "display": "hidden"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://github.com/tutods",
+    "newWindow": true
+  }
+}

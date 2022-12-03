@@ -1,9 +1,14 @@
-import { AppProps } from 'next/app';
-
-import '@styles/global.scss';
 import 'nextra-theme-docs/style.css';
-import '@styles/custom.scss';
+import '../styles/global.scss';
 
-export default function App({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+// Shim requestIdleCallback in Safari
+// if (typeof window !== 'undefined' && !('requestIdleCallback' in window)) {
+// 	window.requestIdleCallback = (fn) => setTimeout(fn, 1);
+// 	window.cancelIdleCallback = (e) => clearTimeout(e);
+// }
+
+export default function Nextra({ Component, pageProps }) {
+	const getLayout = Component.getLayout || ((page) => page);
+
+	return getLayout(<Component {...pageProps} />);
 }
