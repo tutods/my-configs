@@ -4,8 +4,8 @@ import { DocsThemeConfig } from 'nextra-theme-docs';
 const config: DocsThemeConfig = {
 	logo: (
 		<>
-			<span className={'mr-2 hidden font-extrabold md:inline'}>TutoDS</span>
-			<span className={'hidden font-normal text-gray-600 md:inline'}>
+			<span className={'mr-2 font-extrabold'}>TutoDS</span>
+			<span className={'hidden font-normal text-gray-600 dark:text-gray-500 md:inline'}>
 				My Configurations for Fish, ZSH and more..
 			</span>
 		</>

@@ -9,7 +9,7 @@ module.exports = {
 		'./pages/**/*.mdx',
 		'./pages/**/*.tsx',
 		'./pages/**/*.js',
-		'./theme.config.js',
+		'./theme.config.tsx',
 		'./styles.css',
 		'./styles.scss'
 	],
