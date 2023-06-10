@@ -1,0 +1,30 @@
+import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
+
+# Other Utils
+
+This is the list of other tools I'm using on my terminal or in my machines.
+
+## YT-DLP
+
+<ExternalLinkButton
+  href={"https://github.com/yt-dlp/yt-dlp"}
+  target={"_blank"}
+  className={"mb-4 mt-2 inline-flex items-center gap-2"}
+>
+  Documentation
+</ExternalLinkButton>
+
+If you like to download some things from **YouTube**, you can use the `youtube-dl` on your terminal, but the **YT-DL** is a better solution!
+
+Basically, the [**YT-DLP**](https://github.com/yt-dlp/yt-dlp) brings additional features as detailed [here](https://github.com/yt-dlp/yt-dlp#new-features).
+
+For that, I have two commands ready on my terminal alias:
+
+- **For video download:**
+  ```bash
+  yt-dlp -f '((bestvideo+bestaudio/best)[ext^=m]/best)[vcodec!^=?av01]' <video-url>
+  ```
+- **For audio download:**
+  ```bash
+  yt-dlp -f 'ba' -x --audio-format mp3 <video-url>
+  ```
