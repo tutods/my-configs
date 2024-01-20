@@ -150,7 +150,7 @@ alias ls="eza --icons"
 
 Plugins allow you to add new features to your shell. These are the list of plugins I'm currently use.
 
-<Tabs items={["Git Plugin", "License"]}>
+<Tabs items={["Git Plugin", "Pisces", "License"]}>
     <Tab>
         This git plugin add shortcuts for the most popular git commands.
 
@@ -179,6 +179,20 @@ Plugins allow you to add new features to your shell. These are the list of plugi
         - `gl` 👉 `git pull`;
         - `gp` 👉 `git push`.
 
+    </Tab>
+    <Tab>
+      > pisces \['paɪsiz'\] is a plugin for fish that helps you to work with paired symbols like `()` and `''` in the command line. Similar to your favorite text editor!
+
+     <ExternalLinkButton
+            href={URLs.piscesPlugin}
+            target="_blank"
+            className={"mt-4 inline-flex items-center gap-2"}
+        >
+            <BsGithub className={"h-5 w-5"}/>
+            <span>GitHub Repository</span>
+        </ExternalLinkButton>
+
+      - **How to install:** `omf install pisces`
     </Tab>
     <Tab>
         The **License** plugin allow you to generate the `LICENSE.md` to your repository with only one command.

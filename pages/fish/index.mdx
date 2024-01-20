@@ -1,28 +1,24 @@
-import { URLs } from "@/data/constants/urls";
-import { Quote } from "@components/Quote";
-import { ExternalLinkButton } from "@components/Buttons/ExternalLink";
-import { Callout, Tab, Tabs } from "nextra-theme-docs";
-import { Accordion } from "@/components/Accordion";
+import { URLs } from '@/data/constants/urls';
+import { Quote } from '@components/Quote';
+import { ExternalLinkButton } from '@components/Buttons/ExternalLink';
+import { Callout, Tab, Tabs } from 'nextra-theme-docs';
+import { Accordion } from '@/components/Accordion';
 
 # Get Started
 
 <Quote
-  className={"my-2"}
+  className={'my-2'}
   from={
-    <a className={"underline"} href={URLs.fish} target={"_blank"}>
+    <a className={'underline'} href={URLs.fish} target={'_blank'}>
       Fish <small>(official website)</small>
     </a>
   }
 >
-  <strong>fish</strong> is a smart and user-friendly command line shell for
-  Linux, macOS, and the rest of the family.
+  <strong>fish</strong> is a smart and user-friendly command line shell for Linux, macOS, and the
+  rest of the family.
 </Quote>
 
-<ExternalLinkButton
-  target={"_blank"}
-  href={URLs.fish}
-  className="mt-4 inline-block"
->
+<ExternalLinkButton target={'_blank'} href={URLs.fish} className="mt-4 inline-block">
   <span>Official Website</span>
 </ExternalLinkButton>
 
@@ -126,3 +122,17 @@ chsh -s /usr/local/bin/fish
     </Tab>
 
 </Tabs>
+
+## Delete entire line on macOS
+
+On macOS if you press `CMD` + `Backspace`, with fish you probably will get an error but, for me, this is a useful shortcut to delete the entire line.
+
+For this work you only need to do this:
+
+1. On you terminal write `nano ~/.config/fish/functions/fish_user_key_bindings.fish` and paste the content:
+
+```shell
+bind ~ew backward-kill-line
+```
+
+And now will work!

@@ -7,6 +7,7 @@ export const URLs = {
   nerdFont: 'https://www.nerdfonts.com/',
   ohMyFish: 'https://github.com/oh-my-fish/oh-my-fish',
   ohMyZsh: '',
+  piscesPlugin: 'https://github.com/laughedelic/pisces',
   starship: 'https://starship.rs/',
   zsh: '',
 };
