@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "@tutods/eslint-config/next",
+    "@tutods/eslint-config/tailwind",
+    "@tutods/eslint-config/sort-imports",
+    "@tutods/eslint-config/sort-keys",
+    "@tutods/eslint-config/prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "next-env.d.ts"
+      ],
+      "rules": {
+        "multiline-comment-style": "off"
+      }
+    }
+  ]
+}
