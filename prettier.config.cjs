@@ -1,5 +1,4 @@
-const tailwindcssPlugin = require('prettier-plugin-tailwindcss');
-
 module.exports = {
-	plugins: [tailwindcssPlugin]
+  ...require('@tutods/prettier-config'),
+  plugins: ['prettier-plugin-tailwindcss'],
 };

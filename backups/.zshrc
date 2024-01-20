@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Run Python 3 using python command #
 alias python=python3
 
-alias ls="exa --icons"
+alias ls="eza --icons"
 
 # General Alias #
 alias work="cd ~/Developer"
