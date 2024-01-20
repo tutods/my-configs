@@ -11,7 +11,7 @@ export const Quote = ({ children, className = '', from }: Props) => (
   <div
     className={`justify-content-center flex flex-col items-center rounded border border-gray-200 p-6 text-center shadow dark:border-gray-700 ${className}`}
   >
-    <RiDoubleQuotesL className="mx-auto mb-4 h-10 w-10" />
+    <RiDoubleQuotesL className="mx-auto mb-4 size-10" />
 
     <em>{children}</em>
 
