@@ -42,8 +42,8 @@ alias home="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 
-### Exa on LS ###
-alias ls="exa --icons"
+### Eza on LS ###
+alias ls="eza --icons"
 
 ## Custom Functions ##
 
