@@ -31,7 +31,7 @@
 		"sass": "^1.68.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.7.2",
+		"@commitlint/cli": "^18.5.0",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@tutods/eslint-config": "^1.15.0",
 		"@tutods/prettier-config": "^0.2.0",
