@@ -32,7 +32,7 @@
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.2",
-		"@commitlint/config-conventional": "^17.7.0",
+		"@commitlint/config-conventional": "^18.6.2",
 		"@tutods/eslint-config": "^1.15.0",
 		"@tutods/prettier-config": "^0.2.0",
 		"@types/node": "^20.8.0",
